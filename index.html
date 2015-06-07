@@ -128,23 +128,54 @@
 			</div>
 
 			<div data-role="content">
-				<p class="centred-image"><img src="images/places/house3.png" class="detail-image"></p>
+				<p class="centred-image"><img src="images/places/house1.png" class="detail-image"></p>
 				<h2>Z650 / month</h2>	
 				<p>University Accommodation #375, Central Zetland ZE2</p>
 				<ul>
 					<li>4 bed student house</li>
 					<li>30 minutes travel from Zetland university</li>
 					<li>Walking distance to local amenities</li>
+					<li>Advertiser: University Accommodation Services</li>
 				</ul>
-				<a href="#" data-role="button">Message advertiser</a>		
+				<a href="#new-message" data-role="button">Message advertiser</a>		
 			</div>
 
 			<div data-role="footer">
 				<div data-role="footer" class="footer" data-position="fixed">
-				<a href="#search" class="ui-btn ui-shadow ui-corner-all ui-icon-search ui-btn-icon-top">Search</a>
-				<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-mail ui-btn-icon-top">Messages</a>
-				<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-location ui-btn-icon-top">Advertise</a>
-				<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-user ui-btn-icon-top">Account</a>
+					<a href="#search" class="ui-btn ui-shadow ui-corner-all ui-icon-search ui-btn-icon-top">Search</a>
+					<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-mail ui-btn-icon-top">Messages</a>
+					<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-location ui-btn-icon-top">Advertise</a>
+					<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-user ui-btn-icon-top">Account</a>
+				</div>
+			</div>
+		</div>
+
+
+
+		<!-- NEW MESSAGE PAGE -->
+		<div data-role="page" id="new-message">
+			<div data-role="header" data-add-back-btn="true">
+				<h1>New Message</h1>
+			</div>
+			
+			<div data-role="content">
+				<p>To: University Accommodation Services</p>	
+				<p>Subject: University Accommodation #375, Central Zetland ZE2</p>		
+				<form>
+					<!-- TODO validate form -->
+				    <label for="message">Message:</label>
+				    <textarea name="message" id="message"></textarea>
+				</form>
+				<a href="#" data-role="button">Send</a>
+			</div>
+
+			<div data-role="footer">
+				<div data-role="footer" class="footer" data-position="fixed">
+					<a href="#search" class="ui-btn ui-shadow ui-corner-all ui-icon-search ui-btn-icon-top">Search</a>
+					<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-mail ui-btn-icon-top">Messages</a>
+					<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-location ui-btn-icon-top">Advertise</a>
+					<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-user ui-btn-icon-top">Account</a>
+				</div>
 			</div>
 		</div>
 
@@ -162,10 +193,11 @@
 
 			<div data-role="footer">
 				<div data-role="footer" class="footer" data-position="fixed">
-				<a href="#search" class="ui-btn ui-shadow ui-corner-all ui-icon-search ui-btn-icon-top">Search</a>
-				<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-mail ui-btn-icon-top">Messages</a>
-				<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-location ui-btn-icon-top">Advertise</a>
-				<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-user ui-btn-icon-top">Account</a>
+					<a href="#search" class="ui-btn ui-shadow ui-corner-all ui-icon-search ui-btn-icon-top">Search</a>
+					<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-mail ui-btn-icon-top">Messages</a>
+					<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-location ui-btn-icon-top">Advertise</a>
+					<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-user ui-btn-icon-top">Account</a>
+				</div>
 			</div>
 		</div>
 	</body>
