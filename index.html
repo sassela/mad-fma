@@ -81,7 +81,7 @@
 		</div>
 
 
-		<!-- PLACE LIST PAGE -->
+		<!-- PLACE RESULTS LIST PAGE -->
 		<div data-role="page" id="place-results">
 			<!-- TODO add filter (price, location) 
 			TODO add sum of results -->
@@ -157,7 +157,7 @@
 			<div data-role="header" data-add-back-btn="true">
 				<h1>New Message</h1>
 			</div>
-			
+
 			<div data-role="content">
 				<p>To: University Accommodation Services</p>	
 				<p>Subject: University Accommodation #375, Central Zetland ZE2</p>		
@@ -166,7 +166,15 @@
 				    <label for="message">Message:</label>
 				    <textarea name="message" id="message"></textarea>
 				</form>
-				<a href="#" data-role="button">Send</a>
+				<a href="#confirmation" data-rel="popup" data-position-to="window" data-role="button">Send</a>
+			</div>
+
+			<div data-role="popup" id="confirmation" data-overlay-theme="b" style="max-width:400px;">
+			    <div role="main" class="ui-content">
+			        <h3 class="ui-title">Message sent successfully</p>
+			        <a href="#place-results" class="ui-btn ui-corner-all ui-shadow ui-btn-inline">Back to search</a>
+			        <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline" data-transition="flow">Messages</a>
+			    </div>
 			</div>
 
 			<div data-role="footer">
