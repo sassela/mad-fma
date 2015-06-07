@@ -12,6 +12,7 @@
 		<script src="index.js"></script>
 	</head> 
 	<body> 
+
 		<!-- HOME PAGE -->
 		<div data-role="page" id="home" data-title="home">
 			<div data-role="header">
@@ -27,7 +28,6 @@
 				</form>
 				<a href="#search" data-role="button">Find a flatmate</a>
 				<a href="#search" data-role="button">Find a place</a>
-
 			</div>
 
 			<div data-role="footer" class="footer" data-position="fixed">
@@ -35,17 +35,15 @@
 				<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-mail ui-btn-icon-top">Messages</a>
 				<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-location ui-btn-icon-top">Advertise</a>
 				<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-user ui-btn-icon-top">Account</a>
-
 			</div>
 		</div>
 
+
 		<!-- SEARCH PAGE -->
 		<div data-role="page" id="search">
-
 			<div data-role="header" data-add-back-btn="true">
 				<h1>Search</h1>
-			</div><!-- /header -->
-
+			</div>
 
 			<div data-role="content">	
 				<!-- form functionality currently disabled as per spec. Links only -->
@@ -71,8 +69,8 @@
 					<label for="max-rent">Rent per month:</label>
 					<input type="text" id="max-rent" name="max-rent" placeholder="Enter monthly rent budget" disabled />
 				</form>
-				<a href="#" data-role="button">Search</a>
-			</div><!-- /content -->
+				<a href="#place-results" data-role="button">Search</a>
+			</div>
 
 			<div data-role="footer" class="footer" data-position="fixed">
 				<a href="#search" class="ui-btn ui-shadow ui-corner-all ui-icon-search ui-btn-icon-top">Search</a>
@@ -80,6 +78,45 @@
 				<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-location ui-btn-icon-top">Advertise</a>
 				<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-user ui-btn-icon-top">Account</a>
 
+			</div>
+		</div>
+
+
+		<!-- PLACE LIST PAGE -->
+		<div data-role="page" id="place-results">
+			<!-- TODO add filter (price, location) -->
+			<div data-role="header" data-add-back-btn="true">
+				<h1>Place Results</h1>
+			</div>
+
+			<div data-role="content">	
+				<ul data-role="listview" data-inset="true">
+				    <li><a href="#">
+				        <img src="images/places/house1-thumb.png">
+				        <h2>Z650 / month</h2>
+				        <p>University Accommodation #375, Central Zetland ZE2</p></a>
+				    </li>
+				    <li><a href="#">
+				        <img src="images/places/house2-thumb.png">
+				    <h2>Z800 / month</h2>
+				    <p>Lovely 6/p houseshare, South Zetland ZE12</p></a>
+				    </li>
+				    <li><a href="#">
+				        <img src="images/places/house3-thumb.png">
+				    <h2>Z1050 / month</h2>
+				    <p>University Accommodation #752, South Zetland ZE9</p></a>
+				    </li>
+				</ul>
+			</div>
+
+
+			<div data-role="footer">
+				<div data-role="footer" class="footer" data-position="fixed">
+				<a href="#search" class="ui-btn ui-shadow ui-corner-all ui-icon-search ui-btn-icon-top">Search</a>
+				<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-mail ui-btn-icon-top">Messages</a>
+				<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-location ui-btn-icon-top">Advertise</a>
+				<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-user ui-btn-icon-top">Account</a>
+			</div>
 			</div>
 		</div>
 
