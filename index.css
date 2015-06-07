@@ -4,3 +4,11 @@
     margin-bottom:0px;
     padding:0px;
 }
+
+.footer .ui-btn {
+	width:20%;
+}
+
+.footer {
+	text-align:center;
+}
