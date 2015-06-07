@@ -20,7 +20,7 @@
 			</div>
 
 			<div data-role="content">	
-				<p class="logo-home"><img src="images/zetland studentpad-logo-main.png" alt="Zeltand Studentpad logo"></p>
+				<p class="centred-image"><img src="images/zetland studentpad-logo-main.png" alt="Zeltand Studentpad logo"></p>
 				<!-- form functionality currently disabled as per spec. Links only -->
 				<form>
 					<label for="location" class="ui-hidden-accessible">Location:</label>
@@ -77,21 +77,21 @@
 				<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-mail ui-btn-icon-top">Messages</a>
 				<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-location ui-btn-icon-top">Advertise</a>
 				<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-user ui-btn-icon-top">Account</a>
-
 			</div>
 		</div>
 
 
 		<!-- PLACE LIST PAGE -->
 		<div data-role="page" id="place-results">
-			<!-- TODO add filter (price, location) -->
+			<!-- TODO add filter (price, location) 
+			TODO add sum of results -->
 			<div data-role="header" data-add-back-btn="true">
 				<h1>Place Results</h1>
 			</div>
 
 			<div data-role="content">	
 				<ul data-role="listview" data-inset="true">
-				    <li><a href="#">
+				    <li><a href="#place-detail">
 				        <img src="images/places/house1-thumb.png">
 				        <h2>Z650 / month</h2>
 				        <p>University Accommodation #375, Central Zetland ZE2</p></a>
@@ -109,6 +109,35 @@
 				</ul>
 			</div>
 
+			<div data-role="footer">
+				<div data-role="footer" class="footer" data-position="fixed">
+					<a href="#search" class="ui-btn ui-shadow ui-corner-all ui-icon-search ui-btn-icon-top">Search</a>
+					<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-mail ui-btn-icon-top">Messages</a>
+					<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-location ui-btn-icon-top">Advertise</a>
+					<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-user ui-btn-icon-top">Account</a>
+				</div>
+			</div>
+		</div>
+
+
+		<!-- PLACE DETAIL PAGE -->
+		<div data-role="page" id="place-detail">
+			<div data-role="header" data-add-back-btn="true">
+				<h1>View Place</h1>
+				<a href="#" class="ui-btn ui-corner-all ui-icon-star ui-btn-icon-notext ui-btn-right">Account</a>
+			</div>
+
+			<div data-role="content">
+				<p class="centred-image"><img src="images/places/house3.png" class="detail-image"></p>
+				<h2>Z650 / month</h2>	
+				<p>University Accommodation #375, Central Zetland ZE2</p>
+				<ul>
+					<li>4 bed student house</li>
+					<li>30 minutes travel from Zetland university</li>
+					<li>Walking distance to local amenities</li>
+				</ul>
+				<a href="#" data-role="button">Message advertiser</a>		
+			</div>
 
 			<div data-role="footer">
 				<div data-role="footer" class="footer" data-position="fixed">
@@ -117,24 +146,27 @@
 				<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-location ui-btn-icon-top">Advertise</a>
 				<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-user ui-btn-icon-top">Account</a>
 			</div>
-			</div>
 		</div>
+
 
 		<!-- Start of second page -->
 		<div data-role="page" id="bar">
 
-			<div data-role="header">
+			<div data-role="header" data-add-back-btn="true">
 				<h1>Bar</h1>
-			</div><!-- /header -->
-
+			</div>
 			<div data-role="content">	
 				<p>I'm the second in the source order so I'm hidden when the page loads. I'm just shown if a link that references my ID is beeing clicked.</p>		
 				<p><a href="#home">Back to home</a></p>	
-			</div><!-- /content -->
+			</div>
 
 			<div data-role="footer">
-				<h4>Page Footer</h4>
-			</div><!-- /footer -->
-		</div><!-- /page -->
+				<div data-role="footer" class="footer" data-position="fixed">
+				<a href="#search" class="ui-btn ui-shadow ui-corner-all ui-icon-search ui-btn-icon-top">Search</a>
+				<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-mail ui-btn-icon-top">Messages</a>
+				<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-location ui-btn-icon-top">Advertise</a>
+				<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-user ui-btn-icon-top">Account</a>
+			</div>
+		</div>
 	</body>
 </html>

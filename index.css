@@ -1,12 +1,8 @@
-.logo-home {
+.centred-image {
 	text-align:center;
     margin-top:0px;
     margin-bottom:0px;
     padding:0px;
-}
-
-.half-width {
-	width:50%;
 }
 
 .footer .ui-btn {
@@ -15,4 +11,8 @@
 
 .footer {
 	text-align:center;
+}
+
+.detail-image {
+	height: 12em;
 }
