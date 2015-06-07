@@ -1,32 +1,40 @@
 <!DOCTYPE html> 
 <html> 
 	<head> 
-	<title>Page Title</title> 
+	<title>Zetland Studentpad</title> 
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1"> 
 
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
+	<link rel="stylesheet" href="index.css" />
 	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+	<script src="index.js"></script>
 </head> 
 <body> 
 
-<!-- Start of first page -->
-<div data-role="page" id="foo">
+<div data-role="page" id="home" data-title="home">
 
 	<div data-role="header">
-		<h1>Foo</h1>
-	</div><!-- /header -->
+		<h1>Zetland Studentpad</h1>
+	</div>
 
 	<div data-role="content">	
-		<p>I'm first in the source order so I'm shown as the page.</p>		
-		<p>View internal page called <a href="#bar">bar</a></p>	
-	</div><!-- /content -->
+		<p class="logo-home"><img src="images/zetland studentpad-logo-main.png" alt="Zeltand Studentpad logo"></p>
+		<!-- form functionality currently disabled as per spec. Links only -->
+		<form>
+			<label for="location" a class="ui-hidden-accessible">Location:</label>
+			<input type="text" id="location" name="location" placeholder="Enter a location or postcode" disabled/>
+		</form>
+		<a href="#bar" data-role="button">Find a flatmate</a>
+		<a href="#bar" data-role="button">Find a place</a>
+
+	</div>
 
 	<div data-role="footer">
 		<h4>Page Footer</h4>
-	</div><!-- /footer -->
-</div><!-- /page -->
+	</div>
+</div>
 
 
 <!-- Start of second page -->
@@ -38,7 +46,7 @@
 
 	<div data-role="content">	
 		<p>I'm the second in the source order so I'm hidden when the page loads. I'm just shown if a link that references my ID is beeing clicked.</p>		
-		<p><a href="#foo">Back to foo</a></p>	
+		<p><a href="#home">Back to home</a></p>	
 	</div><!-- /content -->
 
 	<div data-role="footer">
