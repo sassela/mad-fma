@@ -9,7 +9,6 @@
 		<link rel="stylesheet" href="index.css" />
 		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-		<script src="index.js"></script>
 	</head> 
 	<body> 
 
@@ -81,10 +80,8 @@
 		</div>
 
 
-		<!-- PLACE RESULTS LIST PAGE -->
+		<!-- PLACE SEARCH RESULTS PAGE -->
 		<div data-role="page" id="place-results">
-			<!-- TODO add filter (price, location) 
-			TODO add sum of results -->
 			<div data-role="header" data-add-back-btn="true">
 				<h1>Search Results</h1>
 				<a href="#" class="ui-btn ui-corner-all ui-icon-star ui-btn-icon-notext ui-btn-right ui-disabled">Save search</a>
@@ -110,13 +107,11 @@
 				</ul>
 			</div>
 
-			<div data-role="footer">
-				<div data-role="footer" class="footer" data-position="fixed">
-					<a href="#search" class="ui-btn ui-shadow ui-corner-all ui-icon-search ui-btn-icon-top">Search</a>
-					<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-mail ui-btn-icon-top ui-disabled">Messages</a>
-					<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-location ui-btn-icon-top ui-disabled">Advertise</a>
-					<a href="#account" class="ui-btn ui-shadow ui-corner-all ui-icon-user ui-btn-icon-top">Account</a>
-				</div>
+			<div data-role="footer" class="footer" data-position="fixed">
+				<a href="#search" class="ui-btn ui-shadow ui-corner-all ui-icon-search ui-btn-icon-top">Search</a>
+				<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-mail ui-btn-icon-top ui-disabled">Messages</a>
+				<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-location ui-btn-icon-top ui-disabled">Advertise</a>
+				<a href="#account" class="ui-btn ui-shadow ui-corner-all ui-icon-user ui-btn-icon-top">Account</a>
 			</div>
 		</div>
 
@@ -141,13 +136,11 @@
 				<a href="#new-message" data-role="button">Message advertiser</a>		
 			</div>
 
-			<div data-role="footer">
-				<div data-role="footer" class="footer" data-position="fixed">
-					<a href="#search" class="ui-btn ui-shadow ui-corner-all ui-icon-search ui-btn-icon-top">Search</a>
-					<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-mail ui-btn-icon-top ui-disabled">Messages</a>
-					<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-location ui-btn-icon-top ui-disabled">Advertise</a>
-					<a href="#account" class="ui-btn ui-shadow ui-corner-all ui-icon-user ui-btn-icon-top">Account</a>
-				</div>
+			<div data-role="footer" class="footer" data-position="fixed">
+				<a href="#search" class="ui-btn ui-shadow ui-corner-all ui-icon-search ui-btn-icon-top">Search</a>
+				<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-mail ui-btn-icon-top ui-disabled">Messages</a>
+				<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-location ui-btn-icon-top ui-disabled">Advertise</a>
+				<a href="#account" class="ui-btn ui-shadow ui-corner-all ui-icon-user ui-btn-icon-top">Account</a>
 			</div>
 		</div>
 
@@ -162,7 +155,6 @@
 				<p>To: University Accommodation Services</p>	
 				<p>Subject: University Accommodation #375, Central Zetland ZE2</p>		
 				<form>
-					<!-- TODO validate form -->
 				    <label for="message">Message:</label>
 				    <textarea name="message" id="message"></textarea>
 				</form>
@@ -177,13 +169,11 @@
 			    </div>
 			</div>
 
-			<div data-role="footer">
-				<div data-role="footer" class="footer" data-position="fixed">
-					<a href="#search" class="ui-btn ui-shadow ui-corner-all ui-icon-search ui-btn-icon-top">Search</a>
-					<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-mail ui-btn-icon-top ui-disabled">Messages</a>
-					<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-location ui-btn-icon-top ui-disabled">Advertise</a>
-					<a href="#account" class="ui-btn ui-shadow ui-corner-all ui-icon-user ui-btn-icon-top">Account</a>
-				</div>
+			<div data-role="footer" class="footer" data-position="fixed">
+				<a href="#search" class="ui-btn ui-shadow ui-corner-all ui-icon-search ui-btn-icon-top">Search</a>
+				<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-mail ui-btn-icon-top ui-disabled">Messages</a>
+				<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-location ui-btn-icon-top ui-disabled">Advertise</a>
+				<a href="#account" class="ui-btn ui-shadow ui-corner-all ui-icon-user ui-btn-icon-top">Account</a>
 			</div>
 		</div>
 
@@ -199,38 +189,14 @@
 				<li><a href="#" class="ui-disabled">Favourites</a></li>
 				<li><a href="#" class="ui-disabled">Messages</a></li>
 			    <li><a href="#" class="ui-disabled">Adverts</a></li>
-			    <li><a href="contact.html" rel="external" data-prefetch>About Zetland Studentpad</a></li>
+			    <li><a href="about.html" rel="external" data-prefetch>About Zetland Studentpad</a></li>
 			</ul>
 
-			<div data-role="footer">
-				<div data-role="footer" class="footer" data-position="fixed">
-					<a href="#search" class="ui-btn ui-shadow ui-corner-all ui-icon-search ui-btn-icon-top">Search</a>
-					<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-mail ui-btn-icon-top ui-disabled">Messages</a>
-					<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-location ui-btn-icon-top ui-disabled">Advertise</a>
-					<a href="#account" class="ui-btn ui-shadow ui-corner-all ui-icon-user ui-btn-icon-top">Account</a>
-				</div>
-			</div>
-		</div>
-
-
-		<!-- PAGE TEMPLATE. TODO DELETE ME -->
-		<div data-role="page" id="bar">
-
-			<div data-role="header" data-add-back-btn="true">
-				<h1>Bar</h1>
-			</div>
-			<div data-role="content">	
-				<p>I'm the second in the source order so I'm hidden when the page loads. I'm just shown if a link that references my ID is beeing clicked.</p>		
-				<p><a href="#home">Back to home</a></p>	
-			</div>
-
-			<div data-role="footer">
-				<div data-role="footer" class="footer" data-position="fixed">
-					<a href="#search" class="ui-btn ui-shadow ui-corner-all ui-icon-search ui-btn-icon-top">Search</a>
-					<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-mail ui-btn-icon-top ui-disabled">Messages</a>
-					<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-location ui-btn-icon-top ui-disabled">Advertise</a>
-					<a href="#account" class="ui-btn ui-shadow ui-corner-all ui-icon-user ui-btn-icon-top">Account</a>
-				</div>
+			<div data-role="footer" class="footer" data-position="fixed">
+				<a href="#search" class="ui-btn ui-shadow ui-corner-all ui-icon-search ui-btn-icon-top">Search</a>
+				<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-mail ui-btn-icon-top ui-disabled">Messages</a>
+				<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-location ui-btn-icon-top ui-disabled">Advertise</a>
+				<a href="#account" class="ui-btn ui-shadow ui-corner-all ui-icon-user ui-btn-icon-top">Account</a>
 			</div>
 		</div>
 	</body>
