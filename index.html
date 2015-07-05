@@ -21,61 +21,38 @@
 			<div data-role="content">	
 				<p class="centred-image"><img src="images/zetland studentpad-logo-main.png" alt="Zeltand Studentpad logo"></p>
 				<!-- form functionality currently disabled as per spec. Links only -->
-				<form>
-					<label for="location" class="ui-hidden-accessible">Location:</label>
-					<input type="text" id="location" name="location" placeholder="Enter a location or postcode" disabled/>
-				</form>
-				<a href="#search" data-role="button">Find a place</a>
+                <form>
+                    <fieldset data-role="controlgroup">
+                        <legend>Search for:</legend>
+                        <input type="radio" name="search-type" id="place" value="on" checked="checked" disabled >
+                        <label for="place">A place</label>
+                    </fieldset>
+                    <label for="location" class="ui-hidden-accessible">Location:</label>
+                    <input type="text" id="location" name="location" placeholder="Enter a location or postcode" disabled />
+                    <div class="ui-field-contain">
+                        <label for="location-boundary" class="ui-hidden-accessible">Location boundary:</label>
+                        <select name="location-boundary" id="location-boundary" data-mini="true" disabled>
+                            <option value="0">This area only</option>
+                            <option value="1">Within 1 mile</option>
+                            <option value="5">Within 5 miles</option>
+                        </select>
+                    </div>
+                    <label for="max-rent">Rent per month:</label>
+                    <input type="text" id="max-rent" name="max-rent" placeholder="Enter monthly rent budget" disabled />
+                </form>
+                <a href="#results" data-role="button">Search</a>
 			</div>
 
 			<div data-role="footer" class="footer" data-position="fixed">
-				<a href="#search" class="ui-btn ui-shadow ui-corner-all ui-icon-search ui-btn-icon-top">Search</a>
+				<a href="#home" class="ui-btn ui-shadow ui-corner-all ui-icon-search ui-btn-icon-top">Search</a>
 				<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-mail ui-btn-icon-top ui-disabled">Messages</a>
 				<a href="#account" class="ui-btn ui-shadow ui-corner-all ui-icon-user ui-btn-icon-top">Account</a>
 			</div>
 		</div>
 
 
-		<!-- SEARCH PAGE -->
-		<div data-role="page" id="search">
-			<div data-role="header" data-add-back-btn="true">
-				<h1>Search</h1>
-			</div>
-
-			<div data-role="content">	
-				<!-- form functionality currently disabled as per spec. Links only -->
-				<form>
-					<fieldset data-role="controlgroup">
-						<legend>Search for:</legend>
-				        <input type="radio" name="search-type" id="place" value="on" checked="checked" disabled >
-				        <label for="place">A place</label>
-					</fieldset>
-					<label for="location" class="ui-hidden-accessible">Location:</label>
-					<input type="text" id="location" name="location" placeholder="Enter a location or postcode" disabled />
-					<div class="ui-field-contain">
-					    <label for="location-boundary" class="ui-hidden-accessible">Location boundary:</label>
-					    <select name="location-boundary" id="location-boundary" data-mini="true" disabled>
-					        <option value="0">This area only</option>
-					        <option value="1">Within 1 mile</option>
-					        <option value="5">Within 5 miles</option>
-					    </select>
-					</div>
-					<label for="max-rent">Rent per month:</label>
-					<input type="text" id="max-rent" name="max-rent" placeholder="Enter monthly rent budget" disabled />
-				</form>
-				<a href="#place-results" data-role="button">Search</a>
-			</div>
-
-			<div data-role="footer" class="footer" data-position="fixed">
-				<a href="#search" class="ui-btn ui-shadow ui-corner-all ui-icon-search ui-btn-icon-top">Search</a>
-				<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-mail ui-btn-icon-top ui-disabled">Messages</a>
-				<a href="#account" class="ui-btn ui-shadow ui-corner-all ui-icon-user ui-btn-icon-top">Account</a>
-			</div>
-		</div>
-
-
-		<!-- PLACE SEARCH RESULTS PAGE -->
-		<div data-role="page" id="place-results">
+		<!-- SEARCH RESULTS PAGE -->
+		<div data-role="page" id="results">
 			<div data-role="header" data-add-back-btn="true">
 				<h1>Search Results</h1>
 				<a href="#" class="ui-btn ui-corner-all ui-icon-star ui-btn-icon-notext ui-btn-right ui-disabled">Save search</a>
@@ -102,14 +79,14 @@
 			</div>
 
 			<div data-role="footer" class="footer" data-position="fixed">
-				<a href="#search" class="ui-btn ui-shadow ui-corner-all ui-icon-search ui-btn-icon-top">Search</a>
+				<a href="#home" class="ui-btn ui-shadow ui-corner-all ui-icon-search ui-btn-icon-top">Search</a>
 				<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-mail ui-btn-icon-top ui-disabled">Messages</a>
 				<a href="#account" class="ui-btn ui-shadow ui-corner-all ui-icon-user ui-btn-icon-top">Account</a>
 			</div>
 		</div>
 
 
-		<!-- PLACE DETAIL PAGE -->
+		<!-- DETAIL PAGE -->
 		<div data-role="page" id="place-detail">
 			<div data-role="header" data-add-back-btn="true">
 				<h1>View Place</h1>
@@ -130,7 +107,7 @@
 			</div>
 
 			<div data-role="footer" class="footer" data-position="fixed">
-				<a href="#search" class="ui-btn ui-shadow ui-corner-all ui-icon-search ui-btn-icon-top">Search</a>
+				<a href="#home" class="ui-btn ui-shadow ui-corner-all ui-icon-search ui-btn-icon-top">Search</a>
 				<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-mail ui-btn-icon-top ui-disabled">Messages</a>
 				<a href="#account" class="ui-btn ui-shadow ui-corner-all ui-icon-user ui-btn-icon-top">Account</a>
 			</div>
@@ -156,13 +133,13 @@
 			<div data-role="popup" id="confirmation" data-overlay-theme="b" style="max-width:400px;">
 			    <div role="main" class="ui-content">
 			        <h3 class="ui-title">Message sent successfully!</p>
-			        <a href="#place-results" class="ui-btn ui-corner-all ui-shadow ui-btn-inline">Back to search</a>
+			        <a href="#results" class="ui-btn ui-corner-all ui-shadow ui-btn-inline">Back to search</a>
 			        <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-disabled" data-transition="flow">Messages</a>
 			    </div>
 			</div>
 
 			<div data-role="footer" class="footer" data-position="fixed">
-				<a href="#search" class="ui-btn ui-shadow ui-corner-all ui-icon-search ui-btn-icon-top">Search</a>
+				<a href="#home" class="ui-btn ui-shadow ui-corner-all ui-icon-search ui-btn-icon-top">Search</a>
 				<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-mail ui-btn-icon-top ui-disabled">Messages</a>
 				<a href="#account" class="ui-btn ui-shadow ui-corner-all ui-icon-user ui-btn-icon-top">Account</a>
 			</div>
@@ -184,7 +161,7 @@
 			</ul>
 
 			<div data-role="footer" class="footer" data-position="fixed">
-				<a href="#search" class="ui-btn ui-shadow ui-corner-all ui-icon-search ui-btn-icon-top">Search</a>
+				<a href="#home" class="ui-btn ui-shadow ui-corner-all ui-icon-search ui-btn-icon-top">Search</a>
 				<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-mail ui-btn-icon-top ui-disabled">Messages</a>
 				<a href="#account" class="ui-btn ui-shadow ui-corner-all ui-icon-user ui-btn-icon-top">Account</a>
 			</div>
