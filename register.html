@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Zedland Studentpad</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />-->
+    <link rel="stylesheet" href="index.css" />
+
+    <link rel="stylesheet"  href="http://code.jquery.com/mobile/git/jquery.mobile-git.css" />
+    <link rel="stylesheet" href="https://rawgithub.com/arschmitz/jquery-mobile-datepicker-wrapper/master/jquery.mobile.datepicker.css" />
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="https://rawgithub.com/jquery/jquery-ui/1-10-stable/ui/jquery.ui.datepicker.js"></script>
+    <script src="http://code.jquery.com/mobile/git/jquery.mobile-git.js"></script>
+    <script src="https://rawgithub.com/arschmitz/jquery-mobile-datepicker-wrapper/master/jquery.mobile.datepicker.js"></script>
+
+    <!--<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>-->
+
+</head>
+<body>
+<div data-role="page" id="register" data-title="register">
+    <div data-role="header">
+        <h1>Zedland Studentpad</h1>
+    </div>
+
+    <div data-role="content" data-add-back-btn="true">
+        <h2>Register</h2>
+        <form>
+            <label for="studentno" class="ui-hidden-accessible">Student No.:</label>
+            <input type="text" id="studentno" name="studentno" placeholder="Student No." />
+
+            <label for="fname" class="ui-hidden-accessible">First Name:</label>
+            <input type="text" id="fname" name="fname" placeholder="First Name" />
+
+            <label for="lname" class="ui-hidden-accessible">Last Name:</label>
+            <input type="text" id="lname" name="lname" placeholder="Last Name" />
+
+            <label for="password" class="ui-hidden-accessible">Last Name:</label>
+            <input type="password" id="password" name="password" placeholder="Password" />
+
+            <label for="programme" class="select ui-hidden-accessible">Programme:</label>
+            <select name="programme" id="programme">
+                <option>Programme:</option>
+                <option value="chemistry">Chemistry</option>
+                <option value="classics">Classics</option>
+                <option value="comms">Communication skills</option>
+                <option value="compsci">Computer science</option>
+                <option value="counselling">Counselling</option>
+                <option value="creawri">Creative writing</option>
+                <option value="criminology">Criminology and Criminal Justice</option>
+            </select>
+
+            <input type="text" id="start-date" data-inline="false" data-role="date" placeholder="Start date">
+
+            <fieldset data-role="controlgroup">
+                <legend>Required:</legend>
+                    <input type="radio" name="accom-type" id="any" value="any" checked="">
+                    <label for="any">Any</label>
+                    <input type="radio" name="accom-type" id="room" value="room">
+                    <label for="room">Room</label>
+                    <input type="radio" name="accom-type" id="flat" value="flat">
+                    <label for="flat">Flat</label>
+                    <input type="radio" name="accom-type" id="house" value="house">
+                    <label for="house">House</label>
+            </fieldset>
+        </form>
+        <a href="#regconfirmation" data-rel="popup" data-position-to="window" data-role="button">Register</a>
+
+        <div data-role="popup" id="regconfirmation" data-overlay-theme="b" style="max-width:400px;">
+            <div role="main" class="ui-content">
+                <h3 class="ui-title">Registered!</h3>
+                    <a href="index.html" rel="external" class="ui-btn ui-corner-all ui-shadow ui-btn-inline">Search</a>
+                    <a href="index.html#account" rel="external" class="ui-btn ui-corner-all ui-shadow ui-btn-inline" data-transition="flow">Account</a>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
