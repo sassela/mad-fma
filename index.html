@@ -30,23 +30,25 @@
 				<p class="centred-image"><img src="images/zetland studentpad-logo-main.png" alt="Zedland Studentpad logo"></p>
 				<!-- form functionality currently disabled as per spec. Links only -->
                 <form>
-                    <fieldset data-role="controlgroup">
-                        <legend>Search for:</legend>
-                        <input type="radio" name="search-type" id="place" value="on" checked="checked" disabled >
-                        <label for="place">A place</label>
-                    </fieldset>
                     <label for="location" class="ui-hidden-accessible">Location:</label>
-                    <input type="text" id="location" name="location" placeholder="Enter a location or postcode" disabled />
-                    <div class="ui-field-contain">
-                        <label for="location-boundary" class="ui-hidden-accessible">Location boundary:</label>
-                        <select name="location-boundary" id="location-boundary" data-mini="true" disabled>
-                            <option value="0">This area only</option>
-                            <option value="1">Within 1 mile</option>
-                            <option value="5">Within 5 miles</option>
-                        </select>
+                    <input type="text" id="location" name="location" placeholder="Enter a location or postcode" />
+                    <fieldset data-role="controlgroup">
+                        <legend>Required:</legend>
+                        <input type="radio" name="accom-type" id="any" value="any" checked="">
+                        <label for="any">Any</label>
+                        <input type="radio" name="accom-type" id="room" value="room">
+                        <label for="room">Room</label>
+                        <input type="radio" name="accom-type" id="flat" value="flat">
+                        <label for="flat">Flat</label>
+                        <input type="radio" name="accom-type" id="house" value="house">
+                        <label for="house">House</label>
+                    </fieldset>
+                    <div data-role="rangeslider">
+                        <label for="rent-min">Monthly rent:</label>
+                        <input type="range" name="rent-min" id="rent-min" min="0" max="1400" step="50" value="250">
+                        <label for="rent-max">Max rent:</label>
+                        <input type="range" name="rent-max" id="rent-max" min="100" max="1500" step="50" value="1250">
                     </div>
-                    <label for="max-rent">Rent per month:</label>
-                    <input type="text" id="max-rent" name="max-rent" placeholder="Enter monthly rent budget" disabled />
                 </form>
                 <a href="#results" data-role="button">Search</a>
 			</div>
