@@ -3,6 +3,24 @@
 // is probably because you have denied permission for location sharing.
 
 var map;
+// todo add places
+//var citymap = {};
+//citymap['acc1'] = {
+//  position: new google.maps.LatLng(51.52307, -0.12426),
+//  description: 'blah'
+//};
+//citymap['acc2'] = {
+//  center: new google.maps.LatLng(40.714352, -74.005973),
+//  population: 8405837
+//};
+//citymap['acc3'] = {
+//  center: new google.maps.LatLng(34.052234, -118.243684),
+//  population: 3857799
+//};
+//citymap['acc4'] = {
+//  center: new google.maps.LatLng(49.25, -123.1),
+//  population: 603502
+//};
 
 function initialize() {
   var mapOptions = {
@@ -17,28 +35,24 @@ function initialize() {
       var pos = new google.maps.LatLng(position.coords.latitude,
                                        position.coords.longitude);
 
-//		var churchillHotelPosition = new google.maps.LatLng(51.52307, -0.12426);
+		var accomm1 = new google.maps.LatLng(51.52307, -0.12426);
 
-//		var currentPositionImage ='http://www.dcs.bbk.ac.uk/lo/mad/madexamples/session5/classactivities/zedlandhotels/icons/currentlocation.png';
 		  var marker = new google.maps.Marker({
               position: pos,
               map: map,
+              icon: {
+                path: google.maps.SymbolPath.CIRCLE,
+                scale: 5
+              },
+              draggable: true,
               title: 'You are here'
           });
-//        	var userPosition  = new google.maps.Marker({
-//        	position: pos,
-//        	map: map,
-//        	icon: currentPositionImage,
-//        	title: 'You are here'
-//        	});
 
-//        	var churchillHotelMarkerImage = 'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=A|FF0000|000000';
-//        	var churchillPosition = new google.maps.Marker({
-//        	position: churchillHotelPosition,
-//        	map: map,
-//        	icon: churchillHotelMarkerImage,
-//        	title: 'Churchill Hotel'
-//        	});
+        	var accomm1Positions = new google.maps.Marker({
+        	position: accomm1,
+        	map: map,
+        	title: 'Accomm 1'
+        	});
 
 //	todo update with accomm info
 //      var infowindow = new google.maps.InfoWindow({
@@ -55,6 +69,12 @@ function initialize() {
     // Browser doesn't support Geolocation
     handleNoGeolocation(false);
   }
+
+//	todo update zoom
+//  var markerBounds = new LatLngBounds();
+//  markerBounds.extend(51.52307, -0.12426);
+//  map.setCenter(markerBounds.getCenter(), map.getBoundsZoomLevel(markerBounds));
+//  map.fitBounds(markerBounds);
 }
 
 function handleNoGeolocation(errorFlag) {
