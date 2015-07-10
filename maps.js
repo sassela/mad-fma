@@ -6,7 +6,7 @@ var map;
 
 function initialize() {
   var mapOptions = {
-    zoom: 6
+    zoom: 12
   };
   map = new google.maps.Map(document.getElementById('map-canvas'),
       mapOptions);
@@ -17,11 +17,35 @@ function initialize() {
       var pos = new google.maps.LatLng(position.coords.latitude,
                                        position.coords.longitude);
 
-      var infowindow = new google.maps.InfoWindow({
-        map: map,
-        position: pos,
-        content: 'Location found using HTML5.'
-      });
+//		var churchillHotelPosition = new google.maps.LatLng(51.52307, -0.12426);
+
+//		var currentPositionImage ='http://www.dcs.bbk.ac.uk/lo/mad/madexamples/session5/classactivities/zedlandhotels/icons/currentlocation.png';
+		  var marker = new google.maps.Marker({
+              position: pos,
+              map: map,
+              title: 'You are here'
+          });
+//        	var userPosition  = new google.maps.Marker({
+//        	position: pos,
+//        	map: map,
+//        	icon: currentPositionImage,
+//        	title: 'You are here'
+//        	});
+
+//        	var churchillHotelMarkerImage = 'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=A|FF0000|000000';
+//        	var churchillPosition = new google.maps.Marker({
+//        	position: churchillHotelPosition,
+//        	map: map,
+//        	icon: churchillHotelMarkerImage,
+//        	title: 'Churchill Hotel'
+//        	});
+
+//	todo update with accomm info
+//      var infowindow = new google.maps.InfoWindow({
+//        map: map,
+//        position: pos,
+//        content: 'Location found using HTML5.'
+//      });
 
       map.setCenter(pos);
     }, function() {
@@ -40,14 +64,24 @@ function handleNoGeolocation(errorFlag) {
     var content = 'Error: Your browser doesn\'t support geolocation.';
   }
 
+	var pos = new google.maps.LatLng(51.521951, -0.130204);
+
   var options = {
     map: map,
-    position: new google.maps.LatLng(51.521951, -0.130204),
+    position: pos,
     content: content
   };
 
-  var infowindow = new google.maps.InfoWindow(options);
-  map.setCenter(options.position);
+  var marker = new google.maps.Marker({
+	    position: pos,
+	    map: map,
+	    title: 'You are here'
+	});
+
+//	todo update
+//  var infowindow = new google.maps.InfoWindow(options);
+//  map.setCenter(options.position);
+
 }
 
 google.maps.event.addDomListener(window, 'load', initialize);
