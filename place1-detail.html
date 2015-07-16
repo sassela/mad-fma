@@ -35,18 +35,31 @@
 			<li>Walking distance to local amenities including the <a href="http://www.shepherdneame.co.uk/pubs/deal/zetland-arms" target="_blank">Zedland Arms</a></li>
 			<li>Advertiser: University Accommodation Services</li>
 		</ul>
-		<a href="index.html#reserve" rel="external" data-role="button" id="reserve">Reserve</a>
+		<div data-role="collapsible">
+			<h2>Reserve</h2>
+			<form>
+				<!--TODO Validation. Update place details passed.-->
+				<input type="text" id="in-date" data-inline="false" data-role="date" placeholder="Move in date">
+				<input type="text" id="out-date" data-inline="false" data-role="date" placeholder="Move out date">
+			</form>
+			<a href="#confirmation" data-rel="popup" data-position-to="window" data-role="button" id="reserve">Send</a>
+		</div>
 		<!--TODO allow multiple locations (JSON)-->
 		<a href="maps.html" rel="external" data-role="button">View on map</a>
 	</div>
-
+	<div data-role="popup" id="confirmation" data-overlay-theme="b" style="max-width:400px;">
+		<div role="main" class="ui-content">
+		<h3 class="ui-title">Reserved!</h3>
+		<a href="index.html#results" rel="external" class="ui-btn ui-corner-all ui-shadow ui-btn-inline">Back to search</a>
+		<a href="reservedplaces.html" rel="external" class="ui-btn ui-corner-all ui-shadow ui-btn-inline" data-transition="flow">Reserved</a>
+		</div>
+	</div>
 	<div data-role="footer" class="footer" data-position="fixed">
 		<a href="index.html#home" rel ="external" class="ui-btn ui-shadow ui-corner-all ui-icon-search ui-btn-icon-top">Search</a>
-		<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-check ui-btn-icon-top ui-disabled">Reserved</a>
+		<a href="reservedplaces.html" rel="external" class="ui-btn ui-shadow ui-corner-all ui-icon-check ui-btn-icon-top">Reserved</a>
 		<a href="index.html#account" rel ="external" class="ui-btn ui-shadow ui-corner-all ui-icon-user ui-btn-icon-top">Account</a>
 		<a href="register.html" rel ="external" class="ui-btn ui-shadow ui-corner-all ui-icon-user ui-btn-icon-top">Register</a>
 	</div>
 </div>
-
 </body>
 </html>

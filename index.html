@@ -54,7 +54,7 @@
 
 			<div data-role="footer" class="footer" data-position="fixed">
 				<a href="#home" class="ui-btn ui-shadow ui-corner-all ui-icon-search ui-btn-icon-top">Search</a>
-				<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-check ui-btn-icon-top ui-disabled">Reserved</a>
+				<a href="reservedplaces.html" rel="external" class="ui-btn ui-shadow ui-corner-all ui-icon-check ui-btn-icon-top">Reserved</a>
 				<a href="#account" class="ui-btn ui-shadow ui-corner-all ui-icon-user ui-btn-icon-top">Account</a>
 				<!--TODO basic log in functionality? (login/reg -> account)-->
 				<a href="register.html" rel ="external" class="ui-btn ui-shadow ui-corner-all ui-icon-user ui-btn-icon-top">Register</a>
@@ -91,40 +91,7 @@
 
 			<div data-role="footer" class="footer" data-position="fixed">
 				<a href="#home" class="ui-btn ui-shadow ui-corner-all ui-icon-search ui-btn-icon-top">Search</a>
-				<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-check ui-btn-icon-top ui-disabled">Reserved</a>
-				<a href="#account" class="ui-btn ui-shadow ui-corner-all ui-icon-user ui-btn-icon-top">Account</a>
-				<a href="register.html" rel ="external" class="ui-btn ui-shadow ui-corner-all ui-icon-user ui-btn-icon-top">Register</a>
-			</div>
-		</div>
-
-
-		<!-- RESERVE PAGE -->
-        <!--TODO replace with collapsible set?-->
-		<div data-role="page" id="reserve">
-			<div data-role="header" data-add-back-btn="true">
-				<h1>Zedland Studentpad</h1>
-			</div>
-
-			<div data-role="content">
-				<p>Central Zedland ZE2</p>
-				<form>
-                    <input type="text" id="in-date" data-inline="false" data-role="date" placeholder="Move in date">
-                    <input type="text" id="out-date" data-inline="false" data-role="date" placeholder="Move out date">
-				</form>
-				<a href="#confirmation" data-rel="popup" data-position-to="window" data-role="button">Reserve</a>
-			</div>
-
-			<div data-role="popup" id="confirmation" data-overlay-theme="b" style="max-width:400px;">
-			    <div role="main" class="ui-content">
-			        <h3 class="ui-title">Reserved!</h3>
-			        <a href="#results" class="ui-btn ui-corner-all ui-shadow ui-btn-inline">Back to search</a>
-			        <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-disabled" data-transition="flow">Reserved</a>
-			    </div>
-			</div>
-
-			<div data-role="footer" class="footer" data-position="fixed">
-				<a href="#home" class="ui-btn ui-shadow ui-corner-all ui-icon-search ui-btn-icon-top">Search</a>
-				<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-check ui-btn-icon-top ui-disabled">Reserved</a>
+				<a href="reservedplaces.html" rel="external" class="ui-btn ui-shadow ui-corner-all ui-icon-check ui-btn-icon-top">Reserved</a>
 				<a href="#account" class="ui-btn ui-shadow ui-corner-all ui-icon-user ui-btn-icon-top">Account</a>
 				<a href="register.html" rel ="external" class="ui-btn ui-shadow ui-corner-all ui-icon-user ui-btn-icon-top">Register</a>
 			</div>
@@ -139,13 +106,13 @@
 			<ul data-role="listview">
 				<li><a href="#" class="ui-disabled">Edit account details</a></li>
 				<li><a href="savedplaces.html" rel="external">Saved places</a></li>
-				<li><a href="#" class="ui-disabled">Reserved places</a></li>
+				<li><a href="reservedplaces.html" rel="external">Reserved places</a></li>
 			    <li><a href="about.html" rel="external" data-prefetch>About Zedland Studentpad</a></li>
 			</ul>
 
 			<div data-role="footer" class="footer" data-position="fixed">
 				<a href="#home" class="ui-btn ui-shadow ui-corner-all ui-icon-search ui-btn-icon-top">Search</a>
-				<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-check ui-btn-icon-top ui-disabled">Reserved</a>
+				<a href="reservedplaces.html" rel="external" class="ui-btn ui-shadow ui-corner-all ui-icon-check ui-btn-icon-top">Reserved</a>
 				<a href="#account" class="ui-btn ui-shadow ui-corner-all ui-icon-user ui-btn-icon-top">Account</a>
 				<a href="register.html" rel ="external" class="ui-btn ui-shadow ui-corner-all ui-icon-user ui-btn-icon-top">Register</a>
 			</div>
