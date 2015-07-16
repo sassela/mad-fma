@@ -9,10 +9,16 @@ $(document).on("pagecontainerbeforeshow", function (e, ui) {
 	}
 });
 
-function setData() {
-	var placeDetails = [
+function setSavedPlaceData() {
+	var savedPlaces = [
     {name:$("#place").text(), image:$('img#image ').attr('src'), price:$("#price").text(), url:getPage()}];
-	localStorage.setItem("placeDetails",JSON.stringify(placeDetails));
+	localStorage.setItem("savedPlaces",JSON.stringify(savedPlaces));
+}
+
+function setReservedPlaceData() {
+	var reservedPlaces = [
+    {name:$("#place").text(), image:$('img#image ').attr('src'), price:$("#price").text(), url:getPage()}];
+	localStorage.setItem("reservedPlaces",JSON.stringify(reservedPlaces));
 }
 
 function getPage() {
@@ -22,6 +28,9 @@ function getPage() {
 
 function init() {
 	$("#save").click(function() {
-		setData();
+		setSavedPlaceData();
 	});
+	$("#reserve").click(function() {
+        setReservedPlaceData();
+    });
 }
