@@ -2,18 +2,12 @@ $(document).on("pagecontainerbeforeshow", function (e, ui) {
 	var page = $.mobile.pageContainer.pagecontainer('getActivePage').attr( 'id' );
 	if(page === "place1-detail") {
 		if (typeof(Storage) != "undefined") {
-			console.log("doin summat!");
-			setData ();
+			init();
 		} else {
 			$("#nostorage").text("The browser does not support storage");
 		}
 	}
 });
-
-//$(this).find('#save').on('click', function (event) {
-////	setData();
-//	console.log("doing summat else");
-//});
 
 function setData() {
 	var placeDetails = [
@@ -24,4 +18,10 @@ function setData() {
 function getPage() {
 	var page = $.mobile.pageContainer.pagecontainer('getActivePage').attr( 'id' );
 	return page;
+}
+
+function init() {
+	$("#save").click(function() {
+		setData();
+	});
 }
