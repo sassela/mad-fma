@@ -2,7 +2,7 @@ $(document).on("pagecontainerbeforeshow", function (e, ui) {
 	var page = $.mobile.pageContainer.pagecontainer('getActivePage').attr( 'id' );
 	if(page === "place1-detail") {
 		if (typeof(Storage) != "undefined") {
-			init();
+			initLocalStorage();
 		} else {
 			$("#nostorage").text("The browser does not support storage");
 		}
@@ -26,7 +26,7 @@ function getPage() {
 	return page;
 }
 
-function init() {
+function initLocalStorage() {
 	$("#save").click(function() {
 		setSavedPlaceData();
 	});
@@ -34,3 +34,12 @@ function init() {
         setReservedPlaceData();
     });
 }
+
+$( document ).on( "pagecreate", function() {
+    $( ".photopopup" ).on({
+        popupbeforeposition: function() {
+            var maxHeight = $( window ).height() - 60 + "px";
+            $( ".photopopup img" ).css( "max-height", maxHeight );
+        }
+    });
+});
