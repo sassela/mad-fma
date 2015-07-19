@@ -26,3 +26,12 @@
 .list-thumbnail {
 	height: inherit
 }
+
+.logo-container {
+	display: block;
+	width: 100%;
+}
+
+.logo {
+	width: inherit
+}
