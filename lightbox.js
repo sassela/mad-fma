@@ -1,6 +1,10 @@
 var currentImageEl = 0;
 
 function init() {
+	$("img").click(function() {
+		navigate(placeImages, currentImageEl, 1);
+	});
+	// TODO add swipe
 	$("#next").click(function() {
 		navigate(placeImages, currentImageEl, 1);
 	});
