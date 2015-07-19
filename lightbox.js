@@ -1,19 +1,27 @@
 var currentImageEl = 0;
 
 function init() {
-	$("img").click(function() {
-		navigate(placeImages, currentImageEl, 1);
-	});
+//	$("img").click(function() {
+//		navigate(placeImages, currentImageEl, 1);
+//	});
 	// TODO add swipe
 	$("#next").click(function() {
 		navigate(placeImages, currentImageEl, 1);
 	});
+	$( document ).on( "swipeleft", function() {
+    	navigate(placeImages, currentImageEl, 1);
+    });
+
 	$("#prev").click(function() {
         navigate(placeImages, currentImageEl, -1);
     });
+    $( document ).on( "swiperight", function() {
+    	navigate(placeImages, currentImageEl, -1);
+    });
+
 }
 
-var placeImages = ["images/places/house1.png", "images/places/house1b.png", "images/places/house1c.png", "images/places/house1d.png"];
+var placeImages = ["images/places/house1.jpeg", "images/places/house1b.jpeg", "images/places/house1c.jpeg", "images/places/house1d.jpeg"];
 // TODO all images object. add horizontal / vertical attribute. Alt text.
 
 function navigate(placeImages, current, direction) {
@@ -37,3 +45,5 @@ $( document ).on( "pagecreate", function() {
         }
     });
 });
+
+
