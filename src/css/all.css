@@ -22,3 +22,7 @@
 .detail-image {
 	height: 12em;
 }
+
+.list-thumbnail {
+	height: inherit
+}
