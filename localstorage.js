@@ -12,9 +12,9 @@ $(document).on("pagecontainerbeforeshow", function (e, ui) {
 
 function storeData() {
 	var placeDetails = [
-    {name:'place1', image:"images/places/house1b.png", price:650, url:'index.html'},
-    {name:'place2', image:"images/places/house1b.png", price:650, url:'index.html'},
-    {name:'place3', image:"images/places/house1b.png", price:650, url:'index.html'}
+    {name:'place1', image:"images/places/house1b.jpeg", price:650, url:'index.html'},
+    {name:'place2', image:"images/places/house1b.jpeg", price:650, url:'index.html'},
+    {name:'place3', image:"images/places/house1b.jpeg", price:650, url:'index.html'}
     ];
 	localStorage.setItem("placeDetails",JSON.stringify(placeDetails));
 }
