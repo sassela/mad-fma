@@ -1,7 +1,7 @@
 $(document).on("pagecontainerbeforeshow", function (e, ui) {
 	var page = $.mobile.pageContainer.pagecontainer('getActivePage').attr( 'id' );
 	if(page === "localstorage") {
-		if (typeof(Storage) != "undefined") {
+		if (typeof(Storage) !== "undefined") {
 			storeData();
 			displayDetails(getData());
 		} else {

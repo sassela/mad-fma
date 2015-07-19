@@ -1,7 +1,7 @@
 $(document).on("pagecontainerbeforeshow", function (e, ui) {
 	var page = $.mobile.pageContainer.pagecontainer('getActivePage').attr( 'id' );
 	if(page === "place1-detail") {
-		if (typeof(Storage) != "undefined") {
+		if (typeof(Storage) !== "undefined") {
 			initLocalStorage();
 		} else {
 			$("#nostorage").text("The browser does not support storage");

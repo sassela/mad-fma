@@ -1,7 +1,7 @@
 $(document).on("pagecontainerbeforeshow", function (e, ui) {
 	var page = $.mobile.pageContainer.pagecontainer('getActivePage').attr( 'id' );
 	if(page === "reservedplaces") {
-		if (typeof(Storage) != "undefined") {
+		if (typeof(Storage) !== "undefined") {
 			displayDetails(getData());
 		} else {
 			$("#nostorage").text("The browser does not support storage");
