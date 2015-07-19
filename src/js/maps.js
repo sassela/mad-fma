@@ -87,8 +87,8 @@ function handleNoGeolocation(errorFlag) {
 	var pos = new google.maps.LatLng(51.521951, -0.130204);
 
   var options = {
-    map: map,
-    position: pos,
+//    map: map,
+//    position: pos,
     content: content
   };
 
