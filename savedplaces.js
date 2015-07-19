@@ -10,7 +10,7 @@ $(document).on("pagecontainerbeforeshow", function (e, ui) {
 });
 
 function getData() {
-	var placeDetails = JSON.parse( localStorage.getItem('placeDetails'));
+	var placeDetails = JSON.parse( localStorage.getItem('savedPlaces'));
 	return placeDetails;
 }
 
