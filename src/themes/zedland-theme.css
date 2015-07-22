@@ -597,19 +597,19 @@ html body .ui-group-theme-c a {
 html .ui-bar-c a:visited,
 html .ui-body-c a:visited,
 html body .ui-group-theme-c a:visited {
-    color: #3388cc /*{c-link-visited}*/;
+    color: #FF9C8F /*{c-link-visited}*/;
 }
 .ui-page-theme-c a:hover,
 html .ui-bar-c a:hover,
 html .ui-body-c a:hover,
 html body .ui-group-theme-c a:hover {
-	color: #005599 /*{c-link-hover}*/;
+	color: #FF5D48 /*{c-link-hover}*/;
 }
 .ui-page-theme-c a:active,
 html .ui-bar-c a:active,
 html .ui-body-c a:active,
 html body .ui-group-theme-c a:active {
-	color: #005599 /*{c-link-active}*/;
+	color: #FF5D48 /*{c-link-active}*/;
 }
 /* Button up */
 .ui-page-theme-c .ui-btn,
@@ -761,19 +761,19 @@ html body .ui-group-theme-d a {
 html .ui-bar-d a:visited,
 html .ui-body-d a:visited,
 html body .ui-group-theme-d a:visited {
-    color: #3388cc /*{d-link-visited}*/;
+    color: #57B5CB /*{d-link-visited}*/;
 }
 .ui-page-theme-d a:hover,
 html .ui-bar-d a:hover,
 html .ui-body-d a:hover,
 html body .ui-group-theme-d a:hover {
-	color: #005599 /*{d-link-hover}*/;
+	color: #369BB3 /*{d-link-hover}*/;
 }
 .ui-page-theme-d a:active,
 html .ui-bar-d a:active,
 html .ui-body-d a:active,
 html body .ui-group-theme-d a:active {
-	color: #005599 /*{d-link-active}*/;
+	color: #369BB3 /*{d-link-active}*/;
 }
 /* Button up */
 .ui-page-theme-d .ui-btn,
@@ -880,7 +880,7 @@ html .ui-body-e .ui-bar-inherit,
 html body .ui-group-theme-e .ui-bar-inherit {
 	background-color: #eeeeee /*{e-bar-background-color}*/;
 	border-color: #eeeeee /*{e-bar-border}*/;
-	color: #000000 /*{e-bar-color}*/;
+	color: #57B5CB /*{e-bar-color}*/;
 	text-shadow: 0 /*{e-bar-shadow-x}*/ 1px /*{e-bar-shadow-y}*/ 0 /*{e-bar-shadow-radius}*/ #eeeeee /*{e-bar-shadow-color}*/;
 	font-weight: bold;
 }
@@ -918,26 +918,26 @@ html .ui-panel-page-container-e {
 html .ui-bar-e a,
 html .ui-body-e a,
 html body .ui-group-theme-e a {
-	color: #3388cc /*{e-link-color}*/;
+	color: #57B5CB /*{e-link-color}*/;
 	font-weight: bold;
 }
 .ui-page-theme-e a:visited,
 html .ui-bar-e a:visited,
 html .ui-body-e a:visited,
 html body .ui-group-theme-e a:visited {
-    color: #3388cc /*{e-link-visited}*/;
+    color: #57B5CB /*{e-link-visited}*/;
 }
 .ui-page-theme-e a:hover,
 html .ui-bar-e a:hover,
 html .ui-body-e a:hover,
 html body .ui-group-theme-e a:hover {
-	color: #005599 /*{e-link-hover}*/;
+	color: #369BB3 /*{e-link-hover}*/;
 }
 .ui-page-theme-e a:active,
 html .ui-bar-e a:active,
 html .ui-body-e a:active,
 html body .ui-group-theme-e a:active {
-	color: #005599 /*{e-link-active}*/;
+	color: #369BB3 /*{e-link-active}*/;
 }
 /* Button up */
 .ui-page-theme-e .ui-btn,
@@ -951,10 +951,10 @@ html .ui-bar-e .ui-btn:visited,
 html .ui-body-e .ui-btn:visited,
 html body .ui-group-theme-e .ui-btn:visited,
 html head + body .ui-btn.ui-btn-e:visited {
-	background-color: #FFFCFB /*{e-bup-background-color}*/;
+	background-color: #FFC6BE /*{e-bup-background-color}*/;
 	border-color: #FFC6BE /*{e-bup-border}*/;
-	color: #FF9C8F /*{e-bup-color}*/;
-	text-shadow: 0 /*{e-bup-shadow-x}*/ 1px /*{e-bup-shadow-y}*/ 0 /*{e-bup-shadow-radius}*/ #f3f3f3 /*{e-bup-shadow-color}*/;
+	color: #333333 /*{e-bup-color}*/;
+	text-shadow: 0 /*{e-bup-shadow-x}*/ 0px /*{e-bup-shadow-y}*/ 0 /*{e-bup-shadow-radius}*/ #f3f3f3 /*{e-bup-shadow-color}*/;
 }
 /* Button hover */
 .ui-page-theme-e .ui-btn:hover,
@@ -975,8 +975,8 @@ html body .ui-group-theme-e .ui-btn:active,
 html head + body .ui-btn.ui-btn-e:active {
 	background-color: #FF7A69 /*{e-bdown-background-color}*/;
 	border-color: #FF7A69 /*{e-bdown-border}*/;
-	color: #ffffff /*{e-bdown-color}*/;
-	text-shadow: 0 /*{e-bdown-shadow-x}*/ 1px /*{e-bdown-shadow-y}*/ 0 /*{e-bdown-shadow-radius}*/ #f3f3f3 /*{e-bdown-shadow-color}*/;
+	color: #333333 /*{e-bdown-color}*/;
+	text-shadow: 0 /*{e-bdown-shadow-x}*/ 0px /*{e-bdown-shadow-y}*/ 0 /*{e-bdown-shadow-radius}*/ #f3f3f3 /*{e-bdown-shadow-color}*/;
 }
 /* Active button */
 .ui-page-theme-e .ui-btn.ui-btn-active,
@@ -1005,7 +1005,7 @@ html body div.ui-slider-track.ui-body-e .ui-btn-active {
 	background-color: #FF9C8F /*{e-active-background-color}*/;
 	border-color: #FF9C8F /*{e-active-border}*/;
 	color: #ffffff /*{e-active-color}*/;
-	text-shadow: 0 /*{e-active-shadow-x}*/ 1px /*{e-active-shadow-y}*/ 0 /*{e-active-shadow-radius}*/ #005599 /*{e-active-shadow-color}*/;
+	text-shadow: 0 /*{e-active-shadow-x}*/ 0px /*{e-active-shadow-y}*/ 0 /*{e-active-shadow-radius}*/ #005599 /*{e-active-shadow-color}*/;
 }
 /* Active radio button icon */
 .ui-page-theme-e .ui-radio-on:after,
