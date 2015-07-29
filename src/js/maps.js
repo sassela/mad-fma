@@ -23,6 +23,9 @@ var map;
 //};
 
 function initialize() {
+	var pos;
+	var accomm1;
+
   var mapOptions = {
     zoom: 12
   };
@@ -32,36 +35,36 @@ function initialize() {
   // Try HTML5 geolocation
   if(navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function(position) {
-      var pos = new google.maps.LatLng(position.coords.latitude,
+      pos = new google.maps.LatLng(position.coords.latitude,
                                        position.coords.longitude);
-
-		var accomm1 = new google.maps.LatLng(51.52307, -0.12426);
+			accomm1 = new google.maps.LatLng(51.52307, -0.12426);
 
 		  var marker = new google.maps.Marker({
-              position: pos,
-              map: map,
-              icon: {
-                path: google.maps.SymbolPath.CIRCLE,
-                scale: 5
-              },
-              draggable: true,
-              title: 'You are here'
-          });
+	        position: pos,
+	        map: map,
+	        icon: {
+	          path: google.maps.SymbolPath.CIRCLE,
+	          scale: 5
+	        },
+	        draggable: true,
+	        title: 'You are here'
+        });
 
-        	var accomm1Positions = new google.maps.Marker({
-        	position: accomm1,
-        	map: map,
-        	title: 'Accomm 1'
-        	});
+      var accomm1Positions = new google.maps.Marker({
+        position: accomm1,
+        map: map,
+        title: 'Accomm 1'
+      });
 
-//	todo update with accomm info
+      fitBounds(pos, accomm1);
+
+//	  todo update with accomm info
 //      var infowindow = new google.maps.InfoWindow({
 //        map: map,
 //        position: pos,
 //        content: 'Location found using HTML5.'
 //      });
 
-      map.setCenter(pos);
     }, function() {
       handleNoGeolocation(true);
     });
@@ -69,12 +72,6 @@ function initialize() {
     // Browser doesn't support Geolocation
     handleNoGeolocation(false);
   }
-
-//	todo update zoom
-//  var markerBounds = new LatLngBounds();
-//  markerBounds.extend(51.52307, -0.12426);
-//  map.setCenter(markerBounds.getCenter(), map.getBoundsZoomLevel(markerBounds));
-//  map.fitBounds(markerBounds);
 }
 
 function handleNoGeolocation(errorFlag) {
@@ -102,6 +99,16 @@ function handleNoGeolocation(errorFlag) {
 //  var infowindow = new google.maps.InfoWindow(options);
 //  map.setCenter(options.position);
 
+}
+
+function fitBounds(pointa, pointb) {
+//fits map bound to include both points
+        var LatLngList = new Array (pointa, pointb);
+	        var bounds = new google.maps.LatLngBounds ();
+	        for (var i = 0, LtLgLen = LatLngList.length; i < LtLgLen; i++) {
+	          bounds.extend (LatLngList[i]);
+        }
+        map.fitBounds(bounds);
 }
 
 google.maps.event.addDomListener(window, 'load', initialize);
