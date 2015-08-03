@@ -23,8 +23,6 @@ var map;
 //};
 
 function initialize() {
-	var pos;
-	var accomm1;
 
 	var mapOptions = {
 	 zoom: 12
@@ -32,7 +30,13 @@ function initialize() {
 	map = new google.maps.Map(document.getElementById('map-canvas'),
 	           mapOptions);
 
-  // Try HTML5 geolocation
+	getPointA();
+}
+
+function getPointA(){
+	var pos;
+	var accomm1;
+// Try HTML5 geolocation
   if(navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function(position) {
       pos = new google.maps.LatLng(position.coords.latitude,
@@ -42,11 +46,6 @@ function initialize() {
 			placePointAMarker(pos);
 
 			placePointBMarker(accomm1);
-//      var accomm1Positions = new google.maps.Marker({
-//        position: accomm1,
-//        map: map,
-//        title: 'Accomm 1'
-//      });
 
       fitBounds(pos, accomm1);
 
