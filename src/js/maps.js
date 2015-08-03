@@ -41,11 +41,12 @@ function initialize() {
 
 			placePointAMarker(pos);
 
-      var accomm1Positions = new google.maps.Marker({
-        position: accomm1,
-        map: map,
-        title: 'Accomm 1'
-      });
+			placePointBMarker(accomm1);
+//      var accomm1Positions = new google.maps.Marker({
+//        position: accomm1,
+//        map: map,
+//        title: 'Accomm 1'
+//      });
 
       fitBounds(pos, accomm1);
 
@@ -103,6 +104,14 @@ function placePointAMarker(pointa){
       draggable: true,
       title: 'You are here'
     });
+}
+
+function placePointBMarker(pointb){
+	var marker = new google.maps.Marker({
+	    position: pointb,
+	    map: map,
+	    title: 'Accomm 1'
+	  });
 }
 
 function fitBounds(pointa, pointb) {
