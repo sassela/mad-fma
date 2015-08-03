@@ -25,23 +25,24 @@ var map;
 var bounds = new google.maps.LatLngBounds();
 
 function initialize() {
-	// dynamically update for each place
-	var pointB = new google.maps.LatLng(51.52307, -0.12426);
 
 	var mapOptions = {
 	 zoom: 12
 	};
 
-	map = new google.maps.Map(document.getElementById('map-canvas'),
-	           mapOptions);
+	map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
 	setPointA();
+
+	// extract latitude and longitude from query string
+  var pointB = new google.maps.LatLng(extractPointBFromUrl()[0], extractPointBFromUrl()[1]);
 	setPointB(pointB);
 }
 
 function setPointA(){
+	// set point A using geolocation or default coordinates
 	var pointA;
-// Try HTML5 geolocation
+	// Try HTML5 geolocation
   if(navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function(position) {
       pointA = new google.maps.LatLng(position.coords.latitude,
@@ -63,6 +64,13 @@ function setPointA(){
     // Browser doesn't support Geolocation
     handleNoGeolocation(false);
   }
+}
+
+function extractPointBFromUrl(){
+	// extract accommodation coordinates from query string in URL
+	var thisUrl = $(location).attr('href');
+	var latLng = thisUrl.split("=")[1].split(",");
+	return latLng;
 }
 
 function setPointB(pointB){
