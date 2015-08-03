@@ -9,15 +9,21 @@ $(document).on("pagecontainerbeforeshow", function (e, ui) {
 	}
 });
 
-function setSavedPlaceData() {
-	var savedPlaces = [
-    {name:$("#place").text(), image:$('img#image ').attr('src'), price:$("#price").text(), url:getPage()}];
+var reservedPlaces = JSON.parse( localStorage.getItem('reservedPlaces'));
+var savedPlaces = JSON.parse( localStorage.getItem('savedPlaces'));
+
+//TODO unique places only
+function savePlace() {
+	if(savedPlaces){
+		savedPlaces.push({name:$("#place").text(), image:$('img#image ').attr('src'), price:$("#price").text(), url:getPage()});
+	} else savedPlaces = [{name:$("#place").text(), image:$('img#image ').attr('src'), price:$("#price").text(), url:getPage()}];
 	localStorage.setItem("savedPlaces",JSON.stringify(savedPlaces));
 }
 
-function setReservedPlaceData() {
-	var reservedPlaces = [
-    {name:$("#place").text(), image:$('img#image ').attr('src'), price:$("#price").text(), url:getPage()}];
+function reservePlace() {
+	if(reservedPlaces){
+	reservedPlaces.push({name:$("#place").text(), image:$('img#image ').attr('src'), price:$("#price").text(), url:getPage()});
+	} else reservedPlaces = [{name:$("#place").text(), image:$('img#image ').attr('src'), price:$("#price").text(), url:getPage()}];
 	localStorage.setItem("reservedPlaces",JSON.stringify(reservedPlaces));
 }
 
@@ -28,11 +34,11 @@ function getPage() {
 
 function initLocalStorage() {
 	$("#save").click(function() {
-		setSavedPlaceData();
+		savePlace();
 	});
 	$("#reserve").click(function() {
-        setReservedPlaceData();
-    });
+    reservePlace();
+  });
 }
 
 $( document ).on( "pagecreate", function() {
