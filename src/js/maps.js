@@ -26,11 +26,11 @@ function initialize() {
 	var pos;
 	var accomm1;
 
-  var mapOptions = {
-    zoom: 12
-  };
-  map = new google.maps.Map(document.getElementById('map-canvas'),
-      mapOptions);
+	var mapOptions = {
+	 zoom: 12
+	};
+	map = new google.maps.Map(document.getElementById('map-canvas'),
+	           mapOptions);
 
   // Try HTML5 geolocation
   if(navigator.geolocation) {
@@ -39,16 +39,7 @@ function initialize() {
                                        position.coords.longitude);
 			accomm1 = new google.maps.LatLng(51.52307, -0.12426);
 
-		  var marker = new google.maps.Marker({
-	        position: pos,
-	        map: map,
-	        icon: {
-	          path: google.maps.SymbolPath.CIRCLE,
-	          scale: 5
-	        },
-	        draggable: true,
-	        title: 'You are here'
-        });
+			placePointAMarker(pos);
 
       var accomm1Positions = new google.maps.Marker({
         position: accomm1,
@@ -99,6 +90,19 @@ function handleNoGeolocation(errorFlag) {
 //  var infowindow = new google.maps.InfoWindow(options);
 //  map.setCenter(options.position);
 
+}
+
+function placePointAMarker(pointa){
+  var marker = new google.maps.Marker({
+      position: pointa,
+      map: map,
+      icon: {
+        path: google.maps.SymbolPath.CIRCLE,
+        scale: 5
+      },
+      draggable: true,
+      title: 'You are here'
+    });
 }
 
 function fitBounds(pointa, pointb) {
