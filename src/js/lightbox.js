@@ -36,7 +36,7 @@ function navigate(placeImages, current, direction) {
 		current = placeImages.length-1;
 	}
 
-	$("img").attr("src", placeImages[current]);
+	$("#popupPhotoLandscape img").attr("src", placeImages[current]);
 	current+=direction;
 	currentImageEl = current;
 }
