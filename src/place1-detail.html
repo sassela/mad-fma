@@ -31,7 +31,7 @@
 
 	<div data-role="content">
 		<div class="centred-div">
-			<a href="#popupPhotoPortrait" data-rel="popup" data-position-to="window" data-transition="fade">
+			<a href="#popupPhotoLandscape" data-rel="popup" data-position-to="window" data-transition="fade">
 			<img src="images/places/house1.jpeg" class="detail-image" id="image">
 			</a>
 		</div>
@@ -54,7 +54,7 @@
 		</div>
 		<!--TODO allow multiple locations (JSON)-->
 		<a href="maps.html?latlng=51.52307,-0.12426" rel="external" data-role="button" target="blank">View on map</a>
-		<a href="#popupPhotoPortrait" data-rel="popup" data-position-to="window" data-role="button" data-transition="fade">View images</a>
+		<a href="#popupPhotoLandscape" data-rel="popup" data-position-to="window" data-role="button" data-transition="fade">View images</a>
 	</div>
 	<!--Reservation confirmation-->
 	<div data-role="popup" id="reserve-conf" data-overlay-theme="b" style="max-width:400px;">
@@ -73,8 +73,8 @@
 		</div>
 	</div>
 	<!--Photo viewer-->
-	<div data-role="popup" id="popupPhotoPortrait" class="photopopup" data-overlay-theme="b" data-corners="false" data-tolerance="30,15">
-		<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img src="images/places/house1.jpeg" alt="Photo portrait">
+	<div data-role="popup" id="popupPhotoLandscape" class="photopopup" data-overlay-theme="b" data-corners="false" data-tolerance="30,15">
+		<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img src="images/places/house1.jpeg" alt="Image of house">
 		<a href="#" id="prev" class="lightbox-btn ui-btn ui-corner-all ui-btn-a ui-icon-carat-l ui-btn-icon-notext">Prev</a>
 		<a href="#" id="next" class="lightbox-btn ui-btn ui-corner-all ui-btn-a ui-icon-carat-r ui-btn-icon-notext">Next</a>
 	</div>
