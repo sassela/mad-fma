@@ -29,10 +29,6 @@ function init() {
     });
 }
 
-function display(images) {
-	console.log(images[0]);
-}
-
 function navigate(placeImages, current, direction) {
 	if((current + direction) > placeImages.length){
 		current = 0;
