@@ -35,3 +35,17 @@
 .logo {
 	width: inherit
 }
+
+.lightbox-btn.ui-btn.ui-corner-all.ui-btn-a  {
+  background-color: transparent;
+  border: none;
+  color: #ffffff;
+  text-shadow: none;
+  position: absolute;
+  top: 40%;
+  box-shadow: none;
+}
+
+.ui-icon-carat-r {
+  right: 0px;
+}
