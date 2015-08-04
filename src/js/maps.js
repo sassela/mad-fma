@@ -1,26 +1,4 @@
-// Note: This example requires that you consent to location sharing when
-// prompted by your browser. If you see a blank space instead of the map, this
-// is probably because you have denied permission for location sharing.
-
 var map;
-// todo add places
-//var citymap = {};
-//citymap['acc1'] = {
-//  position: new google.maps.LatLng(51.52307, -0.12426),
-//  description: 'blah'
-//};
-//citymap['acc2'] = {
-//  center: new google.maps.LatLng(40.714352, -74.005973),
-//  population: 8405837
-//};
-//citymap['acc3'] = {
-//  center: new google.maps.LatLng(34.052234, -118.243684),
-//  population: 3857799
-//};
-//citymap['acc4'] = {
-//  center: new google.maps.LatLng(49.25, -123.1),
-//  population: 603502
-//};
 
 var bounds = new google.maps.LatLngBounds();
 
@@ -49,13 +27,6 @@ function setPointA(){
                                        position.coords.longitude);
 			placePointAMarker(pointA);
 			extendBounds(bounds, pointA);
-
-//	  todo update with accomm info
-//      var infowindow = new google.maps.InfoWindow({
-//        map: map,
-//        position: pos,
-//        content: 'Location found using HTML5.'
-//      });
 
     }, function() {
       handleNoGeolocation(true);
@@ -88,16 +59,10 @@ function handleNoGeolocation(errorFlag) {
 	var defaultPointA = new google.maps.LatLng(51.521951, -0.130204);
 
   var options = {
-//    map: map,
-//    position: pos,
     content: content
   };
 
 	placePointAMarker(defaultPointA);
-
-//	todo update
-//  var infowindow = new google.maps.InfoWindow(options);
-//  map.setCenter(options.position);
 
 }
 
