@@ -1,6 +1,6 @@
 $(document).on("pagecontainerbeforeshow", function (e, ui) {
 	var page = $.mobile.pageContainer.pagecontainer('getActivePage').attr( 'id' );
-	if(page === "savedplaces") {
+	if(page === "favourites") {
 		if (typeof(Storage) !== "undefined") {
 			displayDetails(getData());
 		} else {
