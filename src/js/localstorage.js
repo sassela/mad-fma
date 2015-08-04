@@ -6,14 +6,17 @@ $(document).on("pagecontainerbeforeshow", function (e, ui) {
 	}
 });
 
-function storeItem(lsItemStr, key, place) {
-	var storedItems = JSON.parse( localStorage.getItem(lsItemStr));
+function storeItem(lsObjectStr, key, place) {
+	// store a 'place' item into a given local storage object
+	var storedItems = JSON.parse( localStorage.getItem(lsObjectStr));
 	if(storedItems){
-		if(storedItems[key] === null) {
-			storedItems.push(place);
+		// if item is not already saved, add to local storage object
+		if(storedItems[key] == null) {
+			$.extend(storedItems, place);
 		}
 	} else storedItems = place;
-	localStorage.setItem(lsItemStr,JSON.stringify(storedItems));
+	// update object in local storage
+	localStorage.setItem(lsObjectStr,JSON.stringify(storedItems));
 }
 
 function getPage() {
@@ -26,6 +29,7 @@ function initLocalStorage() {
   var key = $.mobile.pageContainer.pagecontainer('getActivePage').attr( 'id' );
   var place = {};
   // todo add reservation dates to reserved property. Add stars to favourites?
+  // create place object from information on the detail page
   place[key]={name:$("#place").text(), image:$('img#image ').attr('src'), price:$("#price").text(), url:getPage()};
 
 	// save property event (add to favourites)
