@@ -43,7 +43,10 @@
 			<li>Walking distance to local amenities including the <a href="http://www.shepherdneame.co.uk/pubs/deal/zetland-arms" target="_blank">Zedland Arms</a></li>
 			<li>Advertiser: University Accommodation Services</li>
 		</ul>
-		<div data-role="collapsible">
+		<!--TODO allow multiple locations (JSON)-->
+		<a href="maps.html?latlng=51.52307,-0.12426" rel="external" data-role="button" target="blank">View on map</a>
+		<a href="#popupPhotoLandscape" data-rel="popup" data-position-to="window" data-role="button" data-transition="fade">View images</a>
+		<div data-role="collapsible" data-theme="d">
 			<h2>Reserve</h2>
 			<form>
 				<!--TODO Validation. Update place details passed.-->
@@ -52,9 +55,6 @@
 			</form>
 			<a href="#reserve-conf" data-rel="popup" data-position-to="window" data-role="button" id="reserve">Send</a>
 		</div>
-		<!--TODO allow multiple locations (JSON)-->
-		<a href="maps.html?latlng=51.52307,-0.12426" rel="external" data-role="button" target="blank">View on map</a>
-		<a href="#popupPhotoLandscape" data-rel="popup" data-position-to="window" data-role="button" data-transition="fade">View images</a>
 	</div>
 	<!--Reservation confirmation-->
 	<div data-role="popup" id="reserve-conf" data-overlay-theme="b" style="max-width:400px;">

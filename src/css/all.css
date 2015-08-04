@@ -32,6 +32,10 @@
 	width: 100%;
 }
 
+.logo-header-container {
+	display: block;
+}
+
 .logo {
 	width: inherit
 }
